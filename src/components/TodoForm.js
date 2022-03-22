@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { BsArrowDown, BsPlusCircleFill } from "react-icons/bs";
+import { RiCheckboxCircleLine } from "react-icons/ri";
 
 function TodoForm(props) {
   const [input, setInput] = useState(props.edit ? props.edit.value : "");
@@ -40,7 +41,7 @@ function TodoForm(props) {
   return (
     <form onSubmit={handleSubmit} className="todo-form">
       {props.edit ? (
-        <>
+        <div className="todo-form--update">
           <input
             placeholder="Update your item"
             value={input}
@@ -57,10 +58,10 @@ function TodoForm(props) {
             className="todo-input todo-description"
           />
 
-          <button onClick={handleSubmit} className="todo-button edit">
-            Update
+          <button onClick={handleSubmit} className="todo-button">
+            <RiCheckboxCircleLine />
           </button>
-        </>
+        </div>
       ) : (
         <>
           <input

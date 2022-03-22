@@ -7,8 +7,9 @@
 }
 
 body {
+  min-height: 100vh;
   background: linear-gradient(
-    90deg,
+    0deg,
     rgba(48, 16, 255, 1) 0%,
     rgba(100, 115, 255, 1) 100%
   );
@@ -18,11 +19,12 @@ body {
   flex-direction: column;
   justify-content: start;
   width: 520px;
-  min-height: 600px;
+  min-height: 400px;
   background: #161a2b;
   text-align: center;
-  margin: 128px auto;
-  border-radius: 10px;
+  margin: 50px auto;
+  border-radius: 25px;
+  padding: 0 50px;
   padding-bottom: 32px;
 }
 
@@ -38,33 +40,42 @@ h1 {
 }
 
 .todo-form {
+  width: 100%;
   margin-bottom: 32px;
 }
 
 .todo-input {
   padding: 14px 32px 14px 16px;
-  border-radius: 4px 0 0 4px;
+  border-radius: 4px;
   border: 2px solid #5d0cff;
   outline: none;
-  width: 320px;
+  width: 70%;
   background: transparent;
   color: #fff;
 }
 
 .todo-description {
-  width: 81.5% !important;
+  margin-top: 10px;
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 50px;
 }
 
 .todo-input::placeholder {
-  color: #e2e2e2;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .todo-button {
-  padding: 16px;
+  /* padding: 16px; */
+  height: fit-content;
+  width: fit-content;
   border: none;
-  border-radius: 0 4px 4px 0;
+  border-radius: 4px;
   cursor: pointer;
   outline: none;
+  margin: 0 2px;
+  padding: 16px 22px;
   background: linear-gradient(
     90deg,
     rgba(93, 12, 255, 1) 0%,
@@ -84,7 +95,6 @@ h1 {
     rgba(20, 159, 255, 1) 0%,
     rgba(17, 122, 255, 1) 100%
   );
-  padding: 16px 22px;
 }
 
 .todo-container {
@@ -107,7 +117,7 @@ h1 {
 
   padding: 16px;
   border-radius: 5px;
-  width: 90%;
+  width: 100%;
 }
 
 .todo-row:nth-child(4n + 1) {
